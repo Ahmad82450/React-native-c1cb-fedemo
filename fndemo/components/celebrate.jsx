@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, StatusBar, StyleSheet, Text, View } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
-import { Dropdown } from "react-native-material-dropdown";
+// import { Dropdown } from "react-native-material-dropdown";
 
 export default function CelebrateButton() {
   let [count, setNum] = useState(0);
@@ -13,8 +13,9 @@ export default function CelebrateButton() {
       .then((response) => response.json())
       .then((json) => {
         const c_name = json.map((obj) => obj.c_name);
+        const c_duration = json.map((obj) => obj.c_duration);
         setData([...c_name]);
-        console.log(data);
+        console.log(c_duration);
       })
       .catch((error) => {
         console.error(error);
@@ -37,11 +38,11 @@ export default function CelebrateButton() {
         color="#841584"
         accessibilityLabel="Learn more about this purple button"
       />
-      <Dropdown
+      {/* <Dropdown
         label="Celebration category"
         data={data}
         ContainerStyle={celebratePage.container}
-      />
+      /> */}
       <SelectList
         setSelected={(val) => setSelected(val)}
         data={data}
