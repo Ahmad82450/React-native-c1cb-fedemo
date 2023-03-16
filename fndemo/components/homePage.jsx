@@ -1,23 +1,20 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import {Text, Button, View, TextInput, StyleSheet} from 'react-native';
-
+import { Text, View, Button, StyleSheet } from "react-native";
 
 export default function HomePage() {
-
-    return (
-        <View style={styles.container}>
-          <Text></Text>
-          <StatusBar style="auto" />
-        </View>
-    );
+  let [name, setName] = useState("Ahmad");
+  return (
+    <View style={homeStyle.container}>
+      <Text>{name}</Text>
+      <Button onPress={() => setName((banana = "Kassem"))} title="banana" />
+    </View>
+  );
 }
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
+const homeStyle = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

@@ -17,6 +17,8 @@
     "react": "18.2.0",
     "react-native": "0.71.3",
     "react-native-dropdown-select-list": "^2.0.4",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-network-info": "^5.2.1",
     "react-native-vector-icons": "^9.2.0"
   },
   "devDependencies": {
